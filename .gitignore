@@ -31,3 +31,6 @@ proguard/
 
 currencyedittexttester
 settings.gradle
+
+*.iml
+*.swp
