@@ -81,8 +81,11 @@ public class CurrencyEditText extends EditText {
     public String formatCurrency(String val){
         return CurrencyTextFormatter.formatText(val, mLocale);
     }
-    
-    
+
+    @Override
+    protected void onSelectionChanged(int selStart, int selEnd) {
+        setSelection(length());
+    }
 
     protected void setValueInLowestDenom(Long mValueInLowestDenom) {
         this.mValueInLowestDenom = mValueInLowestDenom;
